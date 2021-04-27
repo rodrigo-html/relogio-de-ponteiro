@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio</title>
+</head>
+
+<style>
+    .hora{
+    height: 110px;
+    position: absolute;
+    border-radius: 20px;
+    margin-top: 4%;
+}
+.marc{
+    height: 30px;
+    position: absolute;
+    border-radius: 4px;
+    border: white 3px solid;
+}
+#mar5{
+    top: 25px;
+    left: 71%;
+    transform: rotate(30deg);
+}
+#mar10{
+    top: 83px;
+    left: 87%;
+    transform: rotate(60deg);
+}
+#mar15{
+    top: 162px;
+    left: 92.5%;
+    transform: rotate(90deg);
+}
+#mar20{
+    top: 239px;
+    left: 86.5%;
+    transform: rotate(120deg);
+}
+#mar25{
+    top: 297px;
+    left: 71%;
+    transform: rotate(150deg);
+}
+#mar30{
+    top: 318px;
+    left: 49%;
+    transform: rotate(180deg);
+}
+#mar35{
+    top: 297px;
+    right: 71%;
+    transform: rotate(210deg);
+}
+#mar40{
+    top: 239px;
+    right: 86.5%;
+    transform: rotate(240deg);
+}
+#mar45{
+    top: 162px;
+    right: 92.5%;
+    transform: rotate(270deg);
+}
+#mar50{
+    top: 83px;
+    right: 87%;
+    transform: rotate(300deg);
+}
+#mar55{
+    top: 25px;
+    right: 71%;
+    transform: rotate(330deg);
+}
+#mar60{
+    top: 5px;
+    left: 48.5%;
+    transform: rotate(360deg);
+}
+#hor1{
+    top: 61px;
+    left: 57%;
+    transform: rotate(30deg);
+}
+#hor2{
+    top: 82px;
+    left: 62.5%;
+    transform: rotate(60deg);
+}
+#hor3{
+    top: 108px;
+    left: 65.5%;
+    transform: rotate(90deg);
+}
+#hor4{
+    top: 136px;
+    left: 62.5%;
+    transform: rotate(120deg);
+}
+#hor5{
+    top: 157px;
+    left: 57%;
+    transform: rotate(150deg);
+}
+#hor6{
+    top: 167px;
+    left: 49.5%;
+    transform: rotate(180deg);
+}
+#hor7{
+    top: 157px;
+    right: 57%;
+    transform: rotate(210deg);
+}
+#hor8{
+    top: 136px;
+    right: 62.5%;
+    transform: rotate(240deg);
+}
+#hor9{
+    top: 108px;
+    right: 65.5%;
+    transform: rotate(270deg);
+}
+#hor10{
+    top: 82px;
+    right: 62.5%;
+    transform: rotate(300deg);
+}
+#hor11{
+    top: 61px;
+    right: 57%;
+    transform: rotate(330deg);
+}
+#hor12{
+    top: 50px;
+    left: 48.8%;
+    transform: rotate(360deg);
+}
+body{
+    margin: 0px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+p{
+    color: white;
+    position: absolute;
+    left: 52%;
+    bottom: 2%;
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#centro{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: black;
+    position: absolute;
+    left: 48.2%;
+    top: 48.8%;
+}
+#borda{
+    width: 360px;
+    height: 360px;
+    border-radius: 370px;
+    position: absolute;
+    border: rgb(54, 54, 54) 20px solid;
+    box-shadow: 0px 0px 3px black;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#relogio{
+    width:360px;
+    height: 360px;
+    border-radius: 360px;
+    border: 3px solid black;
+    position: absolute;
+    box-shadow:  0px 0px 2px black;
+    background: rgb(0, 0, 14);
+    z-index: 5;
+}
+.seg{
+    height: 180px;
+    position: absolute;
+}
+.min{
+    height: 180px;
+    position: absolute;
+}
+#seg1{
+    top: 0px;
+    left: 52.5%;
+    transform: rotate(6deg);
+}
+#seg2{
+    top: 2px;
+    left: 55%;
+    transform: rotate(12deg);
+}
+#seg3{
+    top: 4px;
+    left: 57.5%;
+    transform: rotate(18deg);
+}
+#seg4{
+    top: 7px;
+    left: 60%;
+    transform: rotate(24deg);
+}
+#seg5{
+    top: 11px;
+    left: 62.5%;
+    transform: rotate(30deg);
+}
+#seg6{
+    top: 17px;
+    left: 65%;
+    transform: rotate(36deg);
+}
+#seg7{
+    top: 24px;
+    left: 67%;
+    transform: rotate(42deg);
+}
+#seg8{
+    top: 31px;
+    left: 68.5%;
+    transform: rotate(48deg);
+}
+#seg9{
+    top: 37.5px;
+    left: 70%;
+    transform: rotate(54deg);
+}
+#seg10{
+    top: 45px;
+    left: 71.5%;
+    transform: rotate(60deg);
+}
+#seg11{
+    top: 53px;
+    left: 72.5%;
+    transform: rotate(66deg);
+}
+#seg12{
+    top: 61px;
+    left: 73.5%;
+    transform: rotate(72deg);
+}
+#seg13{
+    top: 70px;
+    left: 74%;
+    transform: rotate(78deg);
+}
+#seg14{
+    top: 80px;
+    left: 74.5%;
+    transform: rotate(84deg);
+}
+#seg15{
+    top: 90px;
+    left: 74.5%;
+    transform: rotate(90deg);
+}
+#seg16{
+    top: 100px;
+    left: 74.5%;
+    transform: rotate(96deg);
+}
+#seg17{
+    top: 110px;
+    left: 74%;
+    transform: rotate(102deg);
+}
+#seg18{
+    top: 118px;
+    left: 73.5%;
+    transform: rotate(108deg);
+}
+#seg19{
+    top: 126px;
+    left: 72.5%;
+    transform: rotate(114deg);
+}
+#seg20{
+    top: 135px;
+    left: 71.5%;
+    transform: rotate(120deg);
+}
+#seg21{
+    top: 143px;
+    left: 70%;
+    transform: rotate(126deg);
+}
+#seg22{
+    top: 151px;
+    left: 68%;
+    transform: rotate(132deg);
+}
+#seg23{
+    top: 157px;
+    left: 66%;
+    transform: rotate(138deg);
+}
+#seg24{
+    top: 162px;
+    left: 64.5%;
+    transform: rotate(144deg);
+}
+#seg25{    
+    top: 168px;
+    left: 62.5%;
+    transform: rotate(150deg);
+}
+#seg26{
+    top: 172px;
+    left: 60%;
+    transform: rotate(156deg);
+}
+#seg27{
+    top: 175px;
+    left: 57.5%;
+    transform: rotate(162deg);
+}
+#seg28{
+    top: 178px;
+    left: 55%;
+    transform: rotate(168deg);
+}
+#seg29{
+    top: 179px;
+    left: 52.5%;
+    transform: rotate(174deg);
+}
+#seg30{
+    top: 180px;
+    left: 50%;
+    transform: rotate(180deg);
+}
+#seg31{
+    top: 179px;
+    right: 52.5%;
+    transform: rotate(186deg);
+}
+#seg32{
+    top: 178px;
+    right: 55%;
+    transform: rotate(192deg);
+}
+#seg33{
+    top: 175px;
+    right: 57.5%;
+    transform: rotate(198deg);
+}
+#seg34{
+    top: 172px;
+    right: 60%;
+    transform: rotate(204deg);
+}
+#seg35{
+    top: 168px;
+    right: 62.5%;
+    transform: rotate(210deg);
+}
+#seg36{
+    top: 162px;
+    right: 64.5%;
+    transform: rotate(216deg);
+}
+#seg37{
+    top: 157px;
+    right: 66%;
+    transform: rotate(222deg);
+}
+#seg38{
+    top: 151px;
+    right: 68%;
+    transform: rotate(228deg);
+}
+#seg39{
+    top: 143px;
+    right: 70%;
+    transform: rotate(234deg);
+}
+#seg40{
+    top: 135px;
+    right: 71.5%;
+    transform: rotate(240deg);
+}
+#seg41{
+    top: 126px;
+    right: 72.5%;
+    transform: rotate(246deg);
+}
+#seg42{
+    top: 118px;
+    right: 73.5%;
+    transform: rotate(252deg);
+}
+#seg43{
+    top: 110px;
+    right: 74%;
+    transform: rotate(258deg);
+}
+#seg44{
+    top: 100px;
+    right: 74.5%;
+    transform: rotate(264deg);
+}
+#seg45{
+    top: 90px;
+    right: 74.5%;
+    transform: rotate(270deg);
+}
+#seg46{
+    top: 80px;
+    right: 74.5%;
+    transform: rotate(276deg);
+}
+#seg47{
+    top: 70px;
+    right: 74%;
+    transform: rotate(282deg);
+}
+#seg48{
+    top: 61px;
+    right: 73.5%;
+    transform: rotate(288deg);
+}
+#seg49{
+    top: 53px;
+    right: 72.5%;
+    transform: rotate(294deg);
+}
+#seg50{
+    top: 45px;
+    right: 71.5%;
+    transform: rotate(300deg);
+}
+#seg51{
+    top: 37.5px;
+    right: 70%;
+    transform: rotate(306deg);
+}
+#seg52{
+    top: 31px;
+    right: 68.5%;
+    transform: rotate(312deg);
+}
+#seg53{
+    top: 24px;
+    right: 67%;
+    transform: rotate(318deg);
+}
+#seg54{
+    top: 17px;
+    right: 65%;
+    transform: rotate(324deg);
+}
+#seg55{
+    top: 11px;
+    right: 62.5%;
+    transform: rotate(330deg);
+}
+#seg56{
+    top: 7px;
+    right: 60%;
+    transform: rotate(336deg);
+}
+#seg57{
+    top: 4px;
+    right: 57.5%;
+    transform: rotate(342deg);
+}
+#seg58{
+    top: 2px;
+    right: 55%;
+    transform: rotate(348deg);
+}
+#seg59{
+    top: 0px;
+    right: 52.5%;
+    transform: rotate(354deg);
+}
+#seg60{
+    top: 0px;
+    right: 50%;
+    transform: rotate(360deg);
+}
+
+
+
+
+
+#min1{
+    top: 0px;
+    left: 52.5%;
+    transform: rotate(6deg);
+}
+#min2{
+    top: 2px;
+    left: 55%;
+    transform: rotate(12deg);
+}
+#min3{
+    top: 4px;
+    left: 57.5%;
+    transform: rotate(18deg);
+}
+#min4{
+    top: 7px;
+    left: 60%;
+    transform: rotate(24deg);
+}
+#min5{
+    top: 11px;
+    left: 62.5%;
+    transform: rotate(30deg);
+}
+#min6{
+    top: 17px;
+    left: 65%;
+    transform: rotate(36deg);
+}
+#min7{
+    top: 24px;
+    left: 67%;
+    transform: rotate(42deg);
+}
+#min8{
+    top: 31px;
+    left: 68.5%;
+    transform: rotate(48deg);
+}
+#min9{
+    top: 37.5px;
+    left: 70%;
+    transform: rotate(54deg);
+}
+#min10{
+    top: 45px;
+    left: 71.5%;
+    transform: rotate(60deg);
+}
+#min11{
+    top: 53px;
+    left: 72.5%;
+    transform: rotate(66deg);
+}
+#min12{
+    top: 61px;
+    left: 73.5%;
+    transform: rotate(72deg);
+}
+#min13{
+    top: 70px;
+    left: 74%;
+    transform: rotate(78deg);
+}
+#min14{
+    top: 80px;
+    left: 74.5%;
+    transform: rotate(84deg);
+}
+#min15{
+    top: 90px;
+    left: 74.5%;
+    transform: rotate(90deg);
+}
+#min16{
+    top: 100px;
+    left: 74.5%;
+    transform: rotate(96deg);
+}
+#min17{
+    top: 110px;
+    left: 74%;
+    transform: rotate(102deg);
+}
+#min18{
+    top: 118px;
+    left: 73.5%;
+    transform: rotate(108deg);
+}
+#min19{
+    top: 126px;
+    left: 72.5%;
+    transform: rotate(114deg);
+}
+#min20{
+    top: 135px;
+    left: 71.5%;
+    transform: rotate(120deg);
+}
+#min21{
+    top: 143px;
+    left: 70%;
+    transform: rotate(126deg);
+}
+#min22{
+    top: 151px;
+    left: 68%;
+    transform: rotate(132deg);
+}
+#min23{
+    top: 157px;
+    left: 66%;
+    transform: rotate(138deg);
+}
+#min24{
+    top: 162px;
+    left: 64.5%;
+    transform: rotate(144deg);
+}
+#min25{    
+    top: 168px;
+    left: 62.5%;
+    transform: rotate(150deg);
+}
+#min26{
+    top: 172px;
+    left: 60%;
+    transform: rotate(156deg);
+}
+#min27{
+    top: 175px;
+    left: 57.5%;
+    transform: rotate(162deg);
+}
+#min28{
+    top: 178px;
+    left: 55%;
+    transform: rotate(168deg);
+}
+#min29{
+    top: 179px;
+    left: 52.5%;
+    transform: rotate(174deg);
+}
+#min30{
+    top: 180px;
+    left: 50%;
+    transform: rotate(180deg);
+}
+#min31{
+    top: 179px;
+    right: 52.5%;
+    transform: rotate(186deg);
+}
+#min32{
+    top: 178px;
+    right: 55%;
+    transform: rotate(192deg);
+}
+#min33{
+    top: 175px;
+    right: 57.5%;
+    transform: rotate(198deg);
+}
+#min34{
+    top: 172px;
+    right: 60%;
+    transform: rotate(204deg);
+}
+#min35{
+    top: 168px;
+    right: 62.5%;
+    transform: rotate(210deg);
+}
+#min36{
+    top: 162px;
+    right: 64.5%;
+    transform: rotate(216deg);
+}
+#min37{
+    top: 157px;
+    right: 66%;
+    transform: rotate(222deg);
+}
+#min38{
+    top: 151px;
+    right: 68%;
+    transform: rotate(228deg);
+}
+#min39{
+    top: 143px;
+    right: 70%;
+    transform: rotate(234deg);
+}
+#min40{
+    top: 135px;
+    right: 71.5%;
+    transform: rotate(240deg);
+}
+#min41{
+    top: 126px;
+    right: 72.5%;
+    transform: rotate(246deg);
+}
+#min42{
+    top: 118px;
+    right: 73.5%;
+    transform: rotate(252deg);
+}
+#min43{
+    top: 110px;
+    right: 74%;
+    transform: rotate(258deg);
+}
+#min44{
+    top: 100px;
+    right: 74.5%;
+    transform: rotate(264deg);
+}
+#min45{
+    top: 90px;
+    right: 74.5%;
+    transform: rotate(270deg);
+}
+#min46{
+    top: 80px;
+    right: 74.5%;
+    transform: rotate(276deg);
+}
+#min47{
+    top: 70px;
+    right: 74%;
+    transform: rotate(282deg);
+}
+#min48{
+    top: 61px;
+    right: 73.5%;
+    transform: rotate(288deg);
+}
+#min49{
+    top: 53px;
+    right: 72.5%;
+    transform: rotate(294deg);
+}
+#min50{
+    top: 45px;
+    right: 71.5%;
+    transform: rotate(300deg);
+}
+#min51{
+    top: 37.5px;
+    right: 70%;
+    transform: rotate(306deg);
+}
+#min52{
+    top: 31px;
+    right: 68.5%;
+    transform: rotate(312deg);
+}
+#min53{
+    top: 24px;
+    right: 67%;
+    transform: rotate(318deg);
+}
+#min54{
+    top: 17px;
+    right: 65%;
+    transform: rotate(324deg);
+}
+#min55{
+    top: 11px;
+    right: 62.5%;
+    transform: rotate(330deg);
+}
+#min56{
+    top: 7px;
+    right: 60%;
+    transform: rotate(336deg);
+}
+#min57{
+    top: 4px;
+    right: 57.5%;
+    transform: rotate(342deg);
+}
+#min58{
+    top: 2px;
+    right: 55%;
+    transform: rotate(348deg);
+}
+#min59{
+    top: 0px;
+    right: 52.5%;
+    transform: rotate(354deg);
+}
+#min60{
+    top: 0px;
+    right: 50%;
+    transform: rotate(360deg);
+}
+</style>
+<body>
+    <div id="borda">
+    <div id="relogio">
+        <!--
+            SEGUNDOS
+        -->
+        <div id="centro"></div>
+        <div id="seg1" class="seg"></div>
+        <div id="seg2" class="seg"></div>
+        <div id="seg3" class="seg"></div>
+        <div id="seg4" class="seg"></div>
+        <div id="seg5" class="seg"></div>
+        <div id="seg6" class="seg"></div>
+        <div id="seg7" class="seg"></div>
+        <div id="seg8" class="seg"></div>
+        <div id="seg9" class="seg"></div>
+        <div id="seg10" class="seg"></div>
+        <div id="seg11" class="seg"></div>
+        <div id="seg12" class="seg"></div>
+        <div id="seg13" class="seg"></div>
+        <div id="seg14" class="seg"></div>
+        <div id="seg15" class="seg"></div>
+        <div id="seg16" class="seg"></div>
+        <div id="seg17" class="seg"></div>
+        <div id="seg18" class="seg"></div>
+        <div id="seg19" class="seg"></div>
+        <div id="seg20" class="seg"></div>
+        <div id="seg21" class="seg"></div>
+        <div id="seg22" class="seg"></div>
+        <div id="seg23" class="seg"></div>
+        <div id="seg24" class="seg"></div>
+        <div id="seg25" class="seg"></div>
+        <div id="seg26" class="seg"></div>
+        <div id="seg27" class="seg"></div>
+        <div id="seg28" class="seg"></div>
+        <div id="seg29" class="seg"></div>
+        <div id="seg30" class="seg"></div>
+        <div id="seg31" class="seg"></div>
+        <div id="seg32" class="seg"></div>
+        <div id="seg33" class="seg"></div>
+        <div id="seg34" class="seg"></div>
+        <div id="seg35" class="seg"></div>
+        <div id="seg36" class="seg"></div>
+        <div id="seg37" class="seg"></div>
+        <div id="seg38" class="seg"></div>
+        <div id="seg39" class="seg"></div>
+        <div id="seg40" class="seg"></div>
+        <div id="seg41" class="seg"></div>
+        <div id="seg42" class="seg"></div>
+        <div id="seg43" class="seg"></div>
+        <div id="seg44" class="seg"></div>
+        <div id="seg45" class="seg"></div>
+        <div id="seg46" class="seg"></div>
+        <div id="seg47" class="seg"></div>
+        <div id="seg48" class="seg"></div>
+        <div id="seg49" class="seg"></div>
+        <div id="seg50" class="seg"></div>
+        <div id="seg51" class="seg"></div>
+        <div id="seg52" class="seg"></div>
+        <div id="seg53" class="seg"></div>
+        <div id="seg54" class="seg"></div>
+        <div id="seg55" class="seg"></div>
+        <div id="seg56" class="seg"></div>
+        <div id="seg57" class="seg"></div>
+        <div id="seg58" class="seg"></div>
+        <div id="seg59" class="seg"></div>
+        <div id="seg60" class="seg"></div>
+
+
+        <!--
+            MINUTOS
+        -->
+
+
+        <div id="min1" class="min"></div>
+        <div id="min2" class="min"></div>
+        <div id="min3" class="min"></div>
+        <div id="min4" class="min"></div>
+        <div id="min5" class="min"></div>
+        <div id="min6" class="min"></div>
+        <div id="min7" class="min"></div>
+        <div id="min8" class="min"></div>
+        <div id="min9" class="min"></div>
+        <div id="min10" class="min"></div>
+        <div id="min11" class="min"></div>
+        <div id="min12" class="min"></div>
+        <div id="min13" class="min"></div>
+        <div id="min14" class="min"></div>
+        <div id="min15" class="min"></div>
+        <div id="min16" class="min"></div>
+        <div id="min17" class="min"></div>
+        <div id="min18" class="min"></div>
+        <div id="min19" class="min"></div>
+        <div id="min20" class="min"></div>
+        <div id="min21" class="min"></div>
+        <div id="min22" class="min"></div>
+        <div id="min23" class="min"></div>
+        <div id="min24" class="min"></div>
+        <div id="min25" class="min"></div>
+        <div id="min26" class="min"></div>
+        <div id="min27" class="min"></div>
+        <div id="min28" class="min"></div>
+        <div id="min29" class="min"></div>
+        <div id="min30" class="min"></div>
+        <div id="min31" class="min"></div>
+        <div id="min32" class="min"></div>
+        <div id="min33" class="min"></div>
+        <div id="min34" class="min"></div>
+        <div id="min35" class="min"></div>
+        <div id="min36" class="min"></div>
+        <div id="min37" class="min"></div>
+        <div id="min38" class="min"></div>
+        <div id="min39" class="min"></div>
+        <div id="min40" class="min"></div>
+        <div id="min41" class="min"></div>
+        <div id="min42" class="min"></div>
+        <div id="min43" class="min"></div>
+        <div id="min44" class="min"></div>
+        <div id="min45" class="min"></div>
+        <div id="min46" class="min"></div>
+        <div id="min47" class="min"></div>
+        <div id="min48" class="min"></div>
+        <div id="min49" class="min"></div>
+        <div id="min50" class="min"></div>
+        <div id="min51" class="min"></div>
+        <div id="min52" class="min"></div>
+        <div id="min53" class="min"></div>
+        <div id="min54" class="min"></div>
+        <div id="min55" class="min"></div>
+        <div id="min56" class="min"></div>
+        <div id="min57" class="min"></div>
+        <div id="min58" class="min"></div>
+        <div id="min59" class="min"></div>
+        <div id="min60" class="min"></div>
+
+        <!--
+            HORAS
+        -->
+
+        <div id="hor1" class="hora"></div>
+        <div id="hor2" class="hora"></div>
+        <div id="hor3" class="hora"></div>
+        <div id="hor4" class="hora"></div>
+        <div id="hor5" class="hora"></div>
+        <div id="hor6" class="hora"></div>
+        <div id="hor7" class="hora"></div>
+        <div id="hor8" class="hora"></div>
+        <div id="hor9" class="hora"></div>
+        <div id="hor10" class="hora"></div>
+        <div id="hor11" class="hora"></div>
+        <div id="hor12" class="hora"></div>
+
+
+        <div id="mar5" class="marc"></div>
+        <div id="mar10" class="marc"></div>
+        <div id="mar15" class="marc"></div>
+        <div id="mar20" class="marc"></div>
+        <div id="mar25" class="marc"></div>
+        <div id="mar30" class="marc"></div>
+        <div id="mar35" class="marc"></div>
+        <div id="mar40" class="marc"></div>
+        <div id="mar45" class="marc"></div>
+        <div id="mar50" class="marc"></div>
+        <div id="mar55" class="marc"></div>
+        <div id="mar60" class="marc"></div>
+        <p>Rodrigo L.S</p>
+    </div>
+
+</div>
+<script>
+const seg1 = document.getElementById('seg1')
+const seg2 = document.getElementById('seg2')
+const seg3 = document.getElementById('seg3')
+const seg4 = document.getElementById('seg4')
+const seg5 = document.getElementById('seg5')
+const seg6 = document.getElementById('seg6')
+const seg7 = document.getElementById('seg7')
+const seg8 = document.getElementById('seg8')
+const seg9 = document.getElementById('seg9')
+const seg10 = document.getElementById('seg10')
+const seg11 = document.getElementById('seg11')
+const seg12 = document.getElementById('seg12')
+const seg13 = document.getElementById('seg13')
+const seg14 = document.getElementById('seg14')
+const seg15 = document.getElementById('seg15')
+const seg16 = document.getElementById('seg16')
+const seg17 = document.getElementById('seg17')
+const seg18 = document.getElementById('seg18')
+const seg19 = document.getElementById('seg19')
+const seg20 = document.getElementById('seg20')
+const seg21 = document.getElementById('seg21')
+const seg22 = document.getElementById('seg22')
+const seg23 = document.getElementById('seg23')
+const seg24 = document.getElementById('seg24')
+const seg25 = document.getElementById('seg25')
+const seg26 = document.getElementById('seg26')
+const seg27 = document.getElementById('seg27')
+const seg28 = document.getElementById('seg28')
+const seg29 = document.getElementById('seg29')
+const seg30 = document.getElementById('seg30')
+const seg31 = document.getElementById('seg31')
+const seg32 = document.getElementById('seg32')
+const seg33 = document.getElementById('seg33')
+const seg34 = document.getElementById('seg34')
+const seg35 = document.getElementById('seg35')
+const seg36 = document.getElementById('seg36')
+const seg37 = document.getElementById('seg37')
+const seg38 = document.getElementById('seg38')
+const seg39 = document.getElementById('seg39')
+const seg40 = document.getElementById('seg40')
+const seg41 = document.getElementById('seg41')
+const seg42 = document.getElementById('seg42')
+const seg43 = document.getElementById('seg43')
+const seg44 = document.getElementById('seg44')
+const seg45 = document.getElementById('seg45')
+const seg46 = document.getElementById('seg46')
+const seg47 = document.getElementById('seg47')
+const seg48 = document.getElementById('seg48')
+const seg49 = document.getElementById('seg49')
+const seg50 = document.getElementById('seg50')
+const seg51 = document.getElementById('seg51')
+const seg52 = document.getElementById('seg52')
+const seg53 = document.getElementById('seg53')
+const seg54 = document.getElementById('seg54')
+const seg55 = document.getElementById('seg55')
+const seg56 = document.getElementById('seg56')
+const seg57 = document.getElementById('seg57')
+const seg58 = document.getElementById('seg58')
+const seg59 = document.getElementById('seg59')
+const seg60 = document.getElementById('seg60')
+
+
+const min1 = document.getElementById('min1')
+const min2 = document.getElementById('min2')
+const min3 = document.getElementById('min3')
+const min4 = document.getElementById('min4')
+const min5 = document.getElementById('min5')
+const min6 = document.getElementById('min6')
+const min7 = document.getElementById('min7')
+const min8 = document.getElementById('min8')
+const min9 = document.getElementById('min9')
+const min10 = document.getElementById('min10')
+const min11 = document.getElementById('min11')
+const min12 = document.getElementById('min12')
+const min13 = document.getElementById('min13')
+const min14 = document.getElementById('min14')
+const min15 = document.getElementById('min15')
+const min16 = document.getElementById('min16')
+const min17 = document.getElementById('min17')
+const min18 = document.getElementById('min18')
+const min19 = document.getElementById('min19')
+const min20 = document.getElementById('min20')
+const min21 = document.getElementById('min21')
+const min22 = document.getElementById('min22')
+const min23 = document.getElementById('min23')
+const min24 = document.getElementById('min24')
+const min25 = document.getElementById('min25')
+const min26 = document.getElementById('min26')
+const min27 = document.getElementById('min27')
+const min28 = document.getElementById('min28')
+const min29 = document.getElementById('min29')
+const min30 = document.getElementById('min30')
+const min31 = document.getElementById('min31')
+const min32 = document.getElementById('min32')
+const min33 = document.getElementById('min33')
+const min34 = document.getElementById('min34')
+const min35 = document.getElementById('min35')
+const min36 = document.getElementById('min36')
+const min37 = document.getElementById('min37')
+const min38 = document.getElementById('min38')
+const min39 = document.getElementById('min39')
+const min40 = document.getElementById('min40')
+const min41 = document.getElementById('min41')
+const min42 = document.getElementById('min42')
+const min43 = document.getElementById('min43')
+const min44 = document.getElementById('min44')
+const min45 = document.getElementById('min45')
+const min46 = document.getElementById('min46')
+const min47 = document.getElementById('min47')
+const min48 = document.getElementById('min48')
+const min49 = document.getElementById('min49')
+const min50 = document.getElementById('min50')
+const min51 = document.getElementById('min51')
+const min52 = document.getElementById('min52')
+const min53 = document.getElementById('min53')
+const min54 = document.getElementById('min54')
+const min55 = document.getElementById('min55')
+const min56 = document.getElementById('min56')
+const min57 = document.getElementById('min57')
+const min58 = document.getElementById('min58')
+const min59 = document.getElementById('min59')
+const min60 = document.getElementById('min60')
+const hor1 = document.getElementById('hor1')
+const hor2 = document.getElementById('hor2')
+const hor3 = document.getElementById('hor3')
+const hor4 = document.getElementById('hor4')
+const hor5 = document.getElementById('hor5')
+const hor6 = document.getElementById('hor6')
+const hor7 = document.getElementById('hor7')
+const hor8 = document.getElementById('hor8')
+const hor9 = document.getElementById('hor9')
+const hor10 = document.getElementById('hor10')
+const hor11 = document.getElementById('hor11')
+const hor12 = document.getElementById('hor12')
+
+
+function inicia(){
+    data = new Date()
+    seg = data.getSeconds()
+    min = data.getMinutes()
+    hor = data.getHours()
+    
+    if(hor == 13){
+        hor = 1
+    }else if(hor == 14){
+        hor = 2
+    }else if(hor == 15){
+        hor = 3
+    }else if(hor == 16){
+        hor = 4
+    }else if(hor == 17){
+        hor = 5
+    }else if(hor == 18){
+        hor = 6
+    }else if(hor == 19){
+        hor = 7
+    }else if(hor == 20){
+        hor = 8
+    }else if(hor == 21){
+        hor = 9
+    }else if(hor == 22){
+        hor = 10
+    }else if(hor == 23){
+        hor = 11
+    }else if(hor == 0){
+        hor = 12
+    }
+
+    atualizaseg()
+    atualizamin()
+    atualizahor()
+    loop = requestAnimationFrame(inicia)
+
+}
+
+
+function atualizahor(){
+    switch(hor){
+        case 1:
+            if(hor == 1){
+                hor1.style.border = '3px solid #f0f0f0'
+                lpa1 = setTimeout(limpar(hor12), 1000)
+            }
+            break
+        case 2:
+            if(hor == 2){
+                hor2.style.border = '3px solid #f0f0f0'
+                lpa2 = setTimeout(limpar(hor1), 1000)
+            }
+            break
+        case 3:
+            if(hor == 3){
+                hor3.style.border = '3px solid #f0f0f0'
+                lpa3 = setTimeout(limpar(hor2), 1000)
+            }
+            break
+        case 4:
+            if(hor == 4){
+                hor4.style.border = '3px solid #f0f0f0'
+                lpa4 = setTimeout(limpar(hor3), 1000)
+            }
+            break
+        case 5:
+            if(hor == 5){
+                hor5.style.border = '3px solid #f0f0f0'
+                lpa5 = setTimeout(limpar(hor4), 1000)
+            }
+            break
+        case 6:
+            if(hor == 6){
+                hor6.style.border = '3px solid #f0f0f0'
+                lpa6 = setTimeout(limpar(hor5), 1000)
+            }
+            break
+        case 7:
+            if(hor == 7){
+                hor7.style.border = '3px solid #f0f0f0'
+                lpa7 = setTimeout(limpar(hor6), 1000)
+            }
+            break
+        case 8:
+            if(hor == 8){
+                hor8.style.border = '3px solid #f0f0f0'
+                lpa8 = setTimeout(limpar(hor7), 1000)
+            }
+            break
+        case 9:
+            if(hor == 9){
+                hor9.style.border = '3px solid #f0f0f0'
+                lpa9 = setTimeout(limpar(hor8), 1000)
+            }
+            break
+        case 10:
+            if(hor == 10){
+                hor10.style.border = '3px solid #f0f0f0'
+                lpa10 = setTimeout(limpar(hor9), 1000)
+            }
+            break
+        case 11:
+            if(hor == 11){
+                hor11.style.border = '3px solid #f0f0f0'
+                lpa11 = setTimeout(limpar(hor10), 1000)
+            }
+            break
+        case 12:
+            if(hor == 12){
+                hor12.style.border = '3px solid #f0f0f0'
+                lpa12 = setTimeout(limpar(hor11), 1000)
+            }
+            break
+    }
+}
+
+function atualizaseg(){
+    switch(seg){
+        case 1:
+            if(seg == 1){
+                seg1.style.border = '1px solid #f0f0f0'
+                lmp1 = setTimeout(limpar(seg60), 1000)
+            }
+            break
+        case 2:
+            if(seg == 2){
+                seg2.style.border = '1px solid #f0f0f0'
+                lmp2 = setTimeout(limpar(seg1), 1000)
+            }
+            break
+        case 3:
+            if(seg == 3){
+                seg3.style.border = '1px solid #f0f0f0'
+                lmp3 = setTimeout(limpar(seg2), 1000)
+            }
+            break
+        case 4:
+            if(seg == 4){
+                seg4.style.border = '1px solid #f0f0f0'
+                lmp4 = setTimeout(limpar(seg3), 1000)
+            }
+            break
+        case 5:
+            if(seg == 5){
+                seg5.style.border = '1px solid #f0f0f0'
+                lmp5 = setTimeout(limpar(seg4), 1000)
+            }
+            break
+        case 6:
+            if(seg == 6){
+                seg6.style.border = '1px solid #f0f0f0'
+                lmp6 = setTimeout(limpar(seg5), 1000)
+            }
+            break
+        case 7:
+            if(seg == 7){
+                seg7.style.border = '1px solid #f0f0f0'
+                lmp7 = setTimeout(limpar(seg6), 1000)
+            }
+            break
+        case 8:
+            if(seg == 8){
+                seg8.style.border = '1px solid #f0f0f0'
+                lmp8 = setTimeout(limpar(seg7), 1000)
+            }
+            break
+        case 9:
+            if(seg == 9){
+                seg9.style.border = '1px solid #f0f0f0'
+                lmp9 = setTimeout(limpar(seg8), 1000)
+            }
+            break
+        case 10:
+            if(seg == 10){
+                seg10.style.border = '1px solid #f0f0f0'
+                lmp10 = setTimeout(limpar(seg9), 1000)
+            }
+            break
+        case 11:
+            if(seg == 11){
+                seg11.style.border = '1px solid #f0f0f0'
+                lmp11 = setTimeout(limpar(seg10), 1000)
+            }
+            break
+        case 12:
+            if(seg == 12){
+                seg12.style.border = '1px solid #f0f0f0'
+                lmp12 = setTimeout(limpar(seg11), 1000)
+            }
+            break
+        case 13:
+            if(seg == 13){
+                seg13.style.border = '1px solid #f0f0f0'
+                lmp13 = setTimeout(limpar(seg12), 1000)
+            }
+            break
+        case 14:
+            if(seg == 14){
+                seg14.style.border = '1px solid #f0f0f0'
+                lmp14 = setTimeout(limpar(seg13), 1000)
+            }
+            break
+        case 15:
+            if(seg == 15){
+                seg15.style.border = '1px solid #f0f0f0'
+                lmp15 = setTimeout(limpar(seg14), 1000)
+            }
+            break
+        case 16:
+            if(seg == 16){
+                seg16.style.border = '1px solid #f0f0f0'
+                lmp16 = setTimeout(limpar(seg15), 1000)
+            }
+            break
+        case 17:
+            if(seg == 17){
+                seg17.style.border = '1px solid #f0f0f0'
+                lmp17 = setTimeout(limpar(seg16), 1000)
+            }
+            break
+        case 18:
+            if(seg == 18){
+                seg18.style.border = '1px solid #f0f0f0'
+                lmp18 = setTimeout(limpar(seg17), 1000)
+            }
+            break
+        case 19:
+            if(seg == 19){
+                seg19.style.border = '1px solid #f0f0f0'
+                lmp19 = setTimeout(limpar(seg18), 1000)
+            }
+            break
+        case 20:
+            if(seg == 20){
+                seg20.style.border = '1px solid #f0f0f0'
+                lmp20 = setTimeout(limpar(seg19), 1000)
+            }
+            break
+        case 21:
+            if(seg == 21){
+                seg21.style.border = '1px solid #f0f0f0'
+                lmp21 = setTimeout(limpar(seg20), 1000)
+            }
+            break
+        case 22:
+            if(seg == 22){
+                seg22.style.border = '1px solid #f0f0f0'
+                lmp22 = setTimeout(limpar(seg21), 1000)
+            }
+            break
+        case 23:
+            if(seg == 23){
+                seg23.style.border = '1px solid #f0f0f0'
+                lmp23 = setTimeout(limpar(seg22), 1000)
+            }
+            break
+        case 24:
+            if(seg == 24){
+                seg24.style.border = '1px solid #f0f0f0'
+                lmp24 = setTimeout(limpar(seg23), 1000)
+            }
+            break
+        case 25:
+            if(seg == 25){
+                seg25.style.border = '1px solid #f0f0f0'
+                lmp25 = setTimeout(limpar(seg24), 1000)
+            }
+            break
+        case 26:
+            if(seg == 26){
+                seg26.style.border = '1px solid #f0f0f0'
+                lmp26 = setTimeout(limpar(seg25), 1000)
+            }
+            break
+        case 27:
+            if(seg == 27){
+                seg27.style.border = '1px solid #f0f0f0'
+                lmp27 = setTimeout(limpar(seg26), 1000)
+            }
+            break
+        case 28:
+            if(seg == 28){
+                seg28.style.border = '1px solid #f0f0f0'
+                lmp28 = setTimeout(limpar(seg27), 1000)
+            }
+            break
+        case 29:
+            if(seg == 29){
+                seg29.style.border = '1px solid #f0f0f0'
+                lmp29 = setTimeout(limpar(seg28), 1000)
+            }
+            break
+        case 30:
+            if(seg == 30){
+                seg30.style.border = '1px solid #f0f0f0'
+                lmp30 = setTimeout(limpar(seg29), 1000)
+            }
+            break
+        case 31:
+            if(seg == 31){
+                seg31.style.border = '1px solid #f0f0f0'
+                lmp31 = setTimeout(limpar(seg30), 1000)
+            }
+            break
+        case 32:
+            if(seg == 32){
+                seg32.style.border = '1px solid #f0f0f0'
+                lmp32 = setTimeout(limpar(seg31), 1000)
+            }
+            break
+        case 33:
+            if(seg == 33){
+                seg33.style.border = '1px solid #f0f0f0'
+                lmp33 = setTimeout(limpar(seg32), 1000)
+            }
+            break
+        case 34:
+            if(seg == 34){
+                seg34.style.border = '1px solid #f0f0f0'
+                lmp34 = setTimeout(limpar(seg33), 1000)
+            }
+            break
+        case 35:
+            if(seg == 35){
+                seg35.style.border = '1px solid #f0f0f0'
+                lmp35 = setTimeout(limpar(seg34), 1000)
+            }
+            break
+        case 36:
+            if(seg == 36){
+                seg36.style.border = '1px solid #f0f0f0'
+                lmp36 = setTimeout(limpar(seg35), 1000)
+            }
+            break
+        case 37:
+            if(seg == 37){
+                seg37.style.border = '1px solid #f0f0f0'
+                lmp37 = setTimeout(limpar(seg36), 1000)
+            }
+            break
+        case 38:
+            if(seg == 38){
+                seg38.style.border = '1px solid #f0f0f0'
+                lmp38 = setTimeout(limpar(seg37), 1000)
+            }
+            break
+        case 39:
+            if(seg == 39){
+                seg39.style.border = '1px solid #f0f0f0'
+                lmp39 = setTimeout(limpar(seg38), 1000)
+            }
+            break
+        case 40:
+            if(seg == 40){
+                seg40.style.border = '1px solid #f0f0f0'
+                lmp40 = setTimeout(limpar(seg39), 1000)
+            }
+            break
+        case 41:
+            if(seg == 41){
+                seg41.style.border = '1px solid #f0f0f0'
+                lmp41 = setTimeout(limpar(seg40), 1000)
+            }
+            break
+        case 42:
+            if(seg == 42){
+                seg42.style.border = '1px solid #f0f0f0'
+                lmp42 = setTimeout(limpar(seg41), 1000)
+            }
+            break
+        case 43:
+            if(seg == 43){
+                seg43.style.border = '1px solid #f0f0f0'
+                lmp43 = setTimeout(limpar(seg42), 1000)
+            }
+            break
+        case 44:
+            if(seg == 44){
+                seg44.style.border = '1px solid #f0f0f0'
+                lmp44 = setTimeout(limpar(seg43), 1000)
+            }
+            break
+        case 45:
+            if(seg == 45){
+                seg45.style.border = '1px solid #f0f0f0'
+                lmp45 = setTimeout(limpar(seg44), 1000)
+            }
+            break
+        case 46:
+            if(seg == 46){
+                seg46.style.border = '1px solid #f0f0f0'
+                lmp46 = setTimeout(limpar(seg45), 1000)
+            }
+            break
+        case 47:
+            if(seg == 47){
+                seg47.style.border = '1px solid #f0f0f0'
+                lmp47 = setTimeout(limpar(seg46), 1000)
+            }
+            break
+        case 48:
+            if(seg == 48){
+                seg48.style.border = '1px solid #f0f0f0'
+                lmp48 = setTimeout(limpar(seg47), 1000)
+            }
+            break
+        case 49:
+            if(seg == 49){
+                seg49.style.border = '1px solid #f0f0f0'
+                lmp49 = setTimeout(limpar(seg48), 1000)
+            }
+            break
+        case 50:
+            if(seg == 50){
+                seg50.style.border = '1px solid #f0f0f0'
+                lmp50 = setTimeout(limpar(seg49), 1000)
+            }
+            break
+        case 51:
+            if(seg == 51){
+                seg51.style.border = '1px solid #f0f0f0'
+                lmp51 = setTimeout(limpar(seg50), 1000)
+            }
+            break
+        case 52:
+            if(seg == 52){
+                seg52.style.border = '1px solid #f0f0f0'
+                lmp52 = setTimeout(limpar(seg51), 1000)
+            }
+            break
+        case 53:
+            if(seg == 53){
+                seg53.style.border = '1px solid #f0f0f0'
+                lmp53 = setTimeout(limpar(seg52), 1000)
+            }
+            break
+        case 54:
+            if(seg == 54){
+                seg54.style.border = '1px solid #f0f0f0'
+                lmp54 = setTimeout(limpar(seg53), 1000)
+            }
+            break
+        case 55:
+            if(seg == 55){
+                seg55.style.border = '1px solid #f0f0f0'
+                lmp55 = setTimeout(limpar(seg54), 1000)
+            }
+            break
+        case 56:
+            if(seg == 56){
+                seg56.style.border = '1px solid #f0f0f0'
+                lmp56 = setTimeout(limpar(seg55), 1000)
+            }
+            break
+        case 57:
+            if(seg == 57){
+                seg57.style.border = '1px solid #f0f0f0'
+                lmp57 = setTimeout(limpar(seg56), 1000)
+            }
+            break
+        case 58:
+            if(seg == 58){
+                seg58.style.border = '1px solid #f0f0f0'
+                lmp58 = setTimeout(limpar(seg57), 1000)
+            }
+            break
+        case 59:
+            if(seg == 59){
+                seg59.style.border = '1px solid #f0f0f0'
+                lmp59 = setTimeout(limpar(seg58), 1000)
+            }
+            break
+        default:
+            if(seg == 0){
+                seg60.style.border = '1px solid #f0f0f0'
+                lmp60 = setTimeout(limpar(seg59), 1000)
+            }
+            break
+    }
+}
+
+
+function atualizamin(){
+    if(relogio){
+    switch(min){
+        case 1:
+            if(min == 1){
+                min1.style.border = '2px solid #f0f0f0'
+                lmpa1 = setTimeout(limpar(min59), 1000)
+            }
+            break
+        case 2:
+            if(min == 2){
+                min2.style.border = '2px solid #f0f0f0'
+                lmpa2 = setTimeout(limpar(min1), 1000)
+            }
+            break
+        case 3:
+            if(min == 3){
+                min3.style.border = '2px solid #f0f0f0'
+                lmpa3 = setTimeout(limpar(min2), 1000)
+            }
+            break
+        case 4:
+            if(min == 4){
+                min4.style.border = '2px solid #f0f0f0'
+                lmpa4 = setTimeout(limpar(min3), 1000)
+            }
+            break
+        case 5:
+            if(min == 5){
+                min5.style.border = '2px solid #f0f0f0'
+                lmpa5 = setTimeout(limpar(min4), 1000)
+            }
+            break
+        case 6:
+            if(min == 6){
+                min6.style.border = '2px solid #f0f0f0'
+                lmpa6 = setTimeout(limpar(min5), 1000)
+            }
+            break
+        case 7:
+            if(min == 7){
+                min7.style.border = '2px solid #f0f0f0'
+                lmpa7 = setTimeout(limpar(min6), 1000)
+            }
+            break
+        case 8:
+            if(min == 8){
+                min8.style.border = '2px solid #f0f0f0'
+                lmpa8 = setTimeout(limpar(min7), 1000)
+            }
+            break
+        case 9:
+            if(min == 9){
+                min9.style.border = '2px solid #f0f0f0'
+                lmpa9 = setTimeout(limpar(min8), 1000)
+            }
+            break
+        case 10:
+            if(min == 10){
+                min10.style.border = '2px solid #f0f0f0'
+                lmpa10 = setTimeout(limpar(min9), 1000)
+            }
+            break
+        case 11:
+            if(min == 11){
+                min11.style.border = '2px solid #f0f0f0'
+                lmpa11 = setTimeout(limpar(min10), 1000)
+            }
+            break
+        case 12:
+            if(min == 12){
+                min12.style.border = '2px solid #f0f0f0'
+                lmpa12 = setTimeout(limpar(min11), 1000)
+            }
+            break
+        case 13:
+            if(min == 13){
+                min13.style.border = '2px solid #f0f0f0'
+                lmpa13 = setTimeout(limpar(min12), 1000)
+            }
+            break
+        case 14:
+            if(min == 14){
+                min14.style.border = '2px solid #f0f0f0'
+                lmpa14 = setTimeout(limpar(min13), 1000)
+            }
+            break
+        case 15:
+            if(min == 15){
+                min15.style.border = '2px solid #f0f0f0'
+                lmpa15 = setTimeout(limpar(min14), 1000)
+            }
+            break
+        case 16:
+            if(min == 16){
+                min16.style.border = '2px solid #f0f0f0'
+                lmpa16 = setTimeout(limpar(min15), 1000)
+            }
+            break
+        case 17:
+            if(min == 17){
+                min17.style.border = '2px solid #f0f0f0'
+                lmpa17 = setTimeout(limpar(min16), 1000)
+            }
+            break
+        case 18:
+            if(min == 18){
+                min18.style.border = '2px solid #f0f0f0'
+                lmpa18 = setTimeout(limpar(min17), 1000)
+            }
+            break
+        case 19:
+            if(min == 19){
+                min19.style.border = '2px solid #f0f0f0'
+                lmpa19 = setTimeout(limpar(min18), 1000)
+            }
+            break
+        case 20:
+            if(min == 20){
+                min20.style.border = '2px solid #f0f0f0'
+                lmpa20 = setTimeout(limpar(min19), 1000)
+            }
+            break
+        case 21:
+            if(min == 21){
+                min21.style.border = '2px solid #f0f0f0'
+                lmpa21 = setTimeout(limpar(min20), 1000)
+            }
+            break
+        case 22:
+            if(min == 22){
+                min22.style.border = '2px solid #f0f0f0'
+                lmpa22 = setTimeout(limpar(min21), 1000)
+            }
+            break
+        case 23:
+            if(min == 23){
+                min23.style.border = '2px solid #f0f0f0'
+                lmpa23 = setTimeout(limpar(min22), 1000)
+            }
+            break
+        case 24:
+            if(min == 24){
+                min24.style.border = '2px solid #f0f0f0'
+                lmpa24 = setTimeout(limpar(min23), 1000)
+            }
+            break
+        case 25:
+            if(min == 25){
+                min25.style.border = '2px solid #f0f0f0'
+                lmpa25 = setTimeout(limpar(min24), 1000)
+            }
+            break
+        case 26:
+            if(min == 26){
+                min26.style.border = '2px solid #f0f0f0'
+                lmpa26 = setTimeout(limpar(min25), 1000)
+            }
+            break
+        case 27:
+            if(seg == 27){
+                min27.style.border = '2px solid #f0f0f0'
+                lmpa27 = setTimeout(limpar(min26), 1000)
+            }
+            break
+        case 28:
+            if(min == 28){
+                min28.style.border = '2px solid #f0f0f0'
+                lmpa28 = setTimeout(limpar(min27), 1000)
+            }
+            break
+        case 29:
+            if(min == 29){
+                min29.style.border = '2px solid #f0f0f0'
+                lmpa29 = setTimeout(limpar(min28), 1000)
+            }
+            break
+        case 30:
+            if(min == 30){
+                min30.style.border = '2px solid #f0f0f0'
+                lmpa30 = setTimeout(limpar(min29), 1000)
+            }
+            break
+        case 31:
+            if(min == 31){
+                min31.style.border = '2px solid #f0f0f0'
+                lmpa31 = setTimeout(limpar(min30), 1000)
+            }
+            break
+        case 32:
+            if(min == 32){
+                min32.style.border = '2px solid #f0f0f0'
+                lmpa32 = setTimeout(limpar(min31), 1000)
+            }
+            break
+        case 33:
+            if(min == 33){
+                min33.style.border = '2px solid #f0f0f0'
+                lmpa33 = setTimeout(limpar(min32), 1000)
+            }
+            break
+        case 34:
+            if(min == 34){
+                min34.style.border = '2px solid #f0f0f0'
+                lmpa34 = setTimeout(limpar(min33), 1000)
+            }
+            break
+        case 35:
+            if(seg == 35){
+                min35.style.border = '2px solid #f0f0f0'
+                lmpa35 = setTimeout(limpar(min34), 1000)
+            }
+            break
+        case 36:
+            if(min == 36){
+                min36.style.border = '2px solid #f0f0f0'
+                lmpa36 = setTimeout(limpar(min35), 1000)
+            }
+            break
+        case 37:
+            if(min == 37){
+                min37.style.border = '2px solid #f0f0f0'
+                lmpa37 = setTimeout(limpar(min36), 1000)
+            }
+            break
+        case 38:
+            if(min == 38){
+                min38.style.border = '2px solid #f0f0f0'
+                lmpa38 = setTimeout(limpar(min37), 1000)
+            }
+            break
+        case 39:
+            if(min == 39){
+                min39.style.border = '2px solid #f0f0f0'
+                lmpa39 = setTimeout(limpar(min38), 1000)
+            }
+            break
+        case 40:
+            if(min == 40){
+                min40.style.border = '2px solid #f0f0f0'
+                lmpa40 = setTimeout(limpar(min39), 1000)
+            }
+            break
+        case 41:
+            if(min == 41){
+                min41.style.border = '2px solid #f0f0f0'
+                lmpa41 = setTimeout(limpar(min40), 1000)
+            }
+            break
+        case 42:
+            if(min == 42){
+                min42.style.border = '2px solid #f0f0f0'
+                lmpa42 = setTimeout(limpar(min41), 1000)
+            }
+            break
+        case 43:
+            if(min == 43){
+                min43.style.border = '2px solid #f0f0f0'
+                lmpa43 = setTimeout(limpar(min42), 1000)
+            }
+            break
+        case 44:
+            if(min == 44){
+                min44.style.border = '2px solid #f0f0f0'
+                lmpa44 = setTimeout(limpar(min43), 1000)
+            }
+            break
+        case 45:
+            if(min == 45){
+                min45.style.border = '2px solid #f0f0f0'
+                lmpa45 = setTimeout(limpar(min44), 1000)
+            }
+            break
+        case 46:
+            if(min == 46){
+                min46.style.border = '2px solid #f0f0f0'
+                lmpa46 = setTimeout(limpar(min45), 1000)
+            }
+            break
+        case 47:
+            if(min == 47){
+                min47.style.border = '2px solid #f0f0f0'
+                lmpa47 = setTimeout(limpar(min46), 1000)
+            }
+            break
+        case 48:
+            if(min == 48){
+                min48.style.border = '2px solid #f0f0f0'
+                lmpa48 = setTimeout(limpar(min47), 1000)
+            }
+            break
+        case 49:
+            if(min == 49){
+                min49.style.border = '2px solid #f0f0f0'
+                lmpa49 = setTimeout(limpar(min48), 1000)
+            }
+            break
+        case 50:
+            if(min == 50){
+                min50.style.border = '2px solid #f0f0f0'
+                lmpa50 = setTimeout(limpar(min49), 1000)
+            }
+            break
+        case 51:
+            if(min == 51){
+                min51.style.border = '2px solid #f0f0f0'
+                lmpa51 = setTimeout(limpar(min50), 1000)
+            }
+            break
+        case 52:
+            if(min == 52){
+                min52.style.border = '2px solid #f0f0f0'
+                lmpa52 = setTimeout(limpar(min51), 1000)
+            }
+            break
+        case 53:
+            if(min == 53){
+                min53.style.border = '2px solid #f0f0f0'
+                lmpa53 = setTimeout(limpar(min52), 1000)
+            }
+            break
+        case 54:
+            if(min == 54){
+                min54.style.border = '2px solid #f0f0f0'
+                lmpa54 = setTimeout(limpar(min53), 1000)
+            }
+            break
+        case 55:
+            if(min == 55){
+                min55.style.border = '2px solid #f0f0f0'
+                lmpa55 = setTimeout(limpar(min54), 1000)
+            }
+            break
+        case 56:
+            if(min == 56){
+                min56.style.border = '2px solid #f0f0f0'
+                lmpa56 = setTimeout(limpar(min55), 1000)
+            }
+            break
+        case 57:
+            if(min == 57){
+                min57.style.border = '2px solid #f0f0f0'
+                lmpa57 = setTimeout(limpar(min56), 1000)
+            }
+            break
+        case 58:
+            if(min == 58){
+                min58.style.border = '2px solid #f0f0f0'
+                lmpa58 = setTimeout(limpar(min57), 1000)
+            }
+            break
+        case 59:
+            if(min == 59){
+                min59.style.border = '2px solid #f0f0f0'
+                lmpa59 = setTimeout(limpar(min58), 1000)
+            }
+            break
+        case 60:
+            if(min == 60){
+                min60.style.border = '2px solid #f0f0f0'
+                lmpa60 = setTimeout(limpar(min59), 1000)
+            }
+            break
+    }
+    }
+}
+
+function limpar(obj){
+    obj.style.border = '2px solid rgba(0, 0, 0, 0.000)'
+}
+
+
+window.addEventListener('load', inicia)
+
+</script>
+</body>
+</html>
